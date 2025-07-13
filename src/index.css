@@ -1,0 +1,67 @@
+/* src/index.css */
+
+/* Tailwind CSS directives */
+@import "tailwindcss";
+
+/* Define your CSS Custom Properties (Variables) */
+:root {
+  --color-primary:rgb(31, 89, 99);
+  --color-primary-dark: #4338CA;
+  --color-secondary-btn:rgb(16, 69, 92);
+  --color-secondary-btn-dark: #059669;
+  --color-background-light:rgb(146, 169, 96);
+  --color-surface-card: #FFFFFF;
+  --color-text-default: #374151;
+  --color-text-secondary: #6B7280;
+  --color-border-light: #E5E7EB;
+  --color-error-red: #EF4444;
+
+  /* You can also define global font-related variables here if needed */
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* Global styles for a premium look (using Tailwind concepts and CSS variables) */
+body {
+  font-family: var(--font-inter); /* Use the CSS variable for font-family */
+  color: var(--color-text-default); /* Use the CSS variable */
+  background-color: var(--color-background-light); /* Use the CSS variable */
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary); /* Use the CSS variable */
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary-dark); /* Use the CSS variable */
+}
+button {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: var(--color-secondary-btn); /* Use the CSS variable */
+  color: #FFFFFF; /* White text for buttons */
+  border: none;
+  border-radius: 0.375rem; /* Tailwind's rounded-md */
+  padding: 0.5rem 1rem; /* Tailwind's px-4 py-2 */
+  font-weight: 600; /* Tailwind's font-semibold */
+}
+
+card {
+  background-color: var(--color-surface-card); /* Use the CSS variable */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Tailwind's shadow */
+  padding: 1.5rem; /* Tailwind's p-6 */
+}
